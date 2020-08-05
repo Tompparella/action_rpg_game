@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/movingPlatform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Interface/Interface.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/camerafollow.gd" type="Script" id=6]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=7]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 224, 400 )
+launch_power = 300.0
+
+[node name="MainCamera" type="Camera2D" parent="Player"]
+position = Vector2( 8, -96 )
+current = true
+zoom = Vector2( 0.8, 0.8 )
+smoothing_enabled = true
+drag_margin_top = 0.75
+script = ExtResource( 6 )
+
+[node name="Enemy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 560, 392 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 712, 440 )
+scale = Vector2( 9.64, 1 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 704, 400 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1160, 232 )
+scale = Vector2( 3.94621, 1 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1128, 192 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 784, 344 )
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 880, 288 )
+
+[node name="StaticBody2D6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 816, -16 )
+
+[node name="StaticBody2D7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 256, 72 )
+scale = Vector2( -7.06531, 1 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 40, 32 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 488, 32 )
+
+[node name="movingPlatform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1288, 192 )
+move_to = Vector2( -400, -184 )
+speed = 20
+
+[node name="StaticBody2D8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 720, 32 )
+
+[node name="StaticBody2D9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 456, 392 )
+scale = Vector2( 0.8, 4.85851 )
+
+[node name="StaticBody2D10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 304, 24 )
+scale = Vector2( 0.72, 5 )
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" parent="UILayer" instance=ExtResource( 5 )]
+[connection signal="grounded_updated" from="Player" to="Player/MainCamera" method="_on_Player_grounded_updated"]
+[connection signal="playerDied" from="Player" to="Player/MainCamera" method="player_died"]
