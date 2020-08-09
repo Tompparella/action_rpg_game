@@ -23,7 +23,7 @@ func change_health(amount):
 	if amount <= 0:
 		flash_damage()
 	health_bar.set_value(amount)
-	update_tween.interpolate_property(under_bar, "value", under_bar.value, amount, 0.4, Tween.TRANS_SINE, Tween.EASE_IN_OUT, 0.2)
+	update_tween.interpolate_property(under_bar, "value", under_bar.value, amount, 0.4, Tween.TRANS_BOUNCE, Tween.EASE_OUT, 0.2)
 	update_tween.start()
 	health_text.set_current(amount)
 	assign_color(amount)
@@ -45,6 +45,7 @@ func assign_color(health):
 func flash_damage():
 	var temp = under_bar.get("custom_styles/fg")
 	for i in range (FLASH_N * 2):
+		print("X")
 		var color = temp.bg_color if i % 2 == 1 else flash_color
 		var time = FLASH_RATE * i + FLASH_RATE
 		flash_tween.interpolate_callback(temp, time, "set", "bg_color", color)

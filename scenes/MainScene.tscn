@@ -13,7 +13,6 @@ script = ExtResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 224, 400 )
-launch_power = 300.0
 
 [node name="MainCamera" type="Camera2D" parent="Player"]
 position = Vector2( 8, -96 )
@@ -78,5 +77,4 @@ scale = Vector2( 0.72, 5 )
 [node name="UILayer" type="CanvasLayer" parent="."]
 
 [node name="Interface" parent="UILayer" instance=ExtResource( 5 )]
-[connection signal="grounded_updated" from="Player" to="Player/MainCamera" method="_on_Player_grounded_updated"]
 [connection signal="playerDied" from="Player" to="Player/MainCamera" method="player_died"]

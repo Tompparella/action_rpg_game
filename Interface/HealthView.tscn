@@ -45,7 +45,6 @@ __meta__ = {
 
 [node name="HealthBar" parent="." instance=ExtResource( 1 )]
 custom_styles/bg = SubResource( 3 )
-max_value = 100.0
 value = 50.0
 
 [node name="UpdateTween" type="Tween" parent="."]

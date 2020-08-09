@@ -3,8 +3,9 @@
 [resource]
 resource_name = "fall"
 length = 0.4
+loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("hand_left:position")
+tracks/0/path = NodePath("Flipper/hand_left:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -16,7 +17,7 @@ tracks/0/keys = {
 "values": [ Vector2( 28.5992, -34.4875 ), Vector2( 19.7, -42.4335 ), Vector2( 28.5992, -34.4875 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("hand_left:rotation_degrees")
+tracks/1/path = NodePath("Flipper/hand_left:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -28,7 +29,7 @@ tracks/1/keys = {
 "values": [ -164.8, -164.8 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("arm_left:position")
+tracks/2/path = NodePath("Flipper/arm_left:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -40,7 +41,7 @@ tracks/2/keys = {
 "values": [ Vector2( 16.0936, -23.9342 ), Vector2( 13.9747, -27.1126 ), Vector2( 16.0936, -23.9342 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("arm_left:rotation_degrees")
+tracks/3/path = NodePath("Flipper/arm_left:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -52,7 +53,7 @@ tracks/3/keys = {
 "values": [ -84.7, -119.4, -84.7 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("leg_left:position")
+tracks/4/path = NodePath("Flipper/leg_left:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -64,7 +65,7 @@ tracks/4/keys = {
 "values": [ Vector2( 15.9202, 7.54627 ), Vector2( 16.7148, 12.3139 ), Vector2( 15.9202, 7.54627 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("leg_left:rotation_degrees")
+tracks/5/path = NodePath("Flipper/leg_left:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -76,7 +77,7 @@ tracks/5/keys = {
 "values": [ 42.0, 16.0, 42.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("torso:position")
+tracks/6/path = NodePath("Flipper/torso:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -88,7 +89,7 @@ tracks/6/keys = {
 "values": [ Vector2( 0, -5.65372 ), Vector2( 3.00456, -5.65372 ), Vector2( 0, -5.65372 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("torso:rotation_degrees")
+tracks/7/path = NodePath("Flipper/torso:rotation_degrees")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -100,7 +101,7 @@ tracks/7/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("head:position")
+tracks/8/path = NodePath("Flipper/head:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -112,7 +113,7 @@ tracks/8/keys = {
 "values": [ Vector2( -3.96794, -38.4292 ), Vector2( -2.38419e-07, -38.4292 ), Vector2( -3.96794, -38.4292 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("head:rotation_degrees")
+tracks/9/path = NodePath("Flipper/head:rotation_degrees")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -124,7 +125,7 @@ tracks/9/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("arm_right:position")
+tracks/10/path = NodePath("Flipper/arm_right:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -136,7 +137,7 @@ tracks/10/keys = {
 "values": [ Vector2( -19.7, -22.0444 ), Vector2( -15.4621, -25.7525 ), Vector2( -19.7, -22.0444 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("arm_right:rotation_degrees")
+tracks/11/path = NodePath("Flipper/arm_right:rotation_degrees")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -148,7 +149,7 @@ tracks/11/keys = {
 "values": [ 86.7, 130.1, 86.7 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("leg_right:position")
+tracks/12/path = NodePath("Flipper/leg_right:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -160,7 +161,7 @@ tracks/12/keys = {
 "values": [ Vector2( 3.00456, 12.0501 ), Vector2( 3.00456, 12.8447 ), Vector2( 3.00456, 12.0501 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("leg_right:rotation_degrees")
+tracks/13/path = NodePath("Flipper/leg_right:rotation_degrees")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -172,7 +173,7 @@ tracks/13/keys = {
 "values": [ -33.4, -7.4, -33.4 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("hand_right:position")
+tracks/14/path = NodePath("Flipper/hand_right:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -184,7 +185,7 @@ tracks/14/keys = {
 "values": [ Vector2( -28.9679, -30.1948 ), Vector2( -19.7, -38.6705 ), Vector2( -28.9679, -30.1948 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("hand_right:rotation_degrees")
+tracks/15/path = NodePath("Flipper/hand_right:rotation_degrees")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -196,7 +197,7 @@ tracks/15/keys = {
 "values": [ 156.1, 156.1, 156.1 ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("arm_left:scale")
+tracks/16/path = NodePath("Flipper/arm_left:scale")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false

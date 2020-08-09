@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/camerafollow.gd" type="Script" id=3]
+[ext_resource path="res://assets/Enemy.tscn" type="PackedScene" id=4]
+
+[node name="StateMachineTest" type="Node2D"]
+position = Vector2( 512, 240 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -288, 64 )
+
+[node name="MainCamera" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.8, 0.8 )
+smoothing_enabled = true
+script = ExtResource( 3 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16, 96 )
+scale = Vector2( 5, 1 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 112, 56 )
